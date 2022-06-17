@@ -1,0 +1,59 @@
+<html>
+    <head>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+
+    <body>
+      
+        
+      
+        <div class="w-75 mx-auto text-center p-5">
+            <h1 class="text-left text-secondary">Bookmarker</h1>
+            <hr>
+            <div class="content p-5 bg-light   ">
+                <h3 class="font-weight-bolder">
+                    Bookmark your favorite sites
+                </h3>
+                <label for="siteName" class="font-weight-bolder">Site Name</label>
+                <input type="text"  id="siteName" class="form-control mb-2" placeholder="Bookmark Name">
+    
+                <label for="siteURL" class="font-weight-bolder">Site URL</label>
+                <input type="text"  id="siteURL" class="form-control mb-2" placeholder="Website URL">
+    
+    
+                <button class="btn btn-primary" onclick="add()  " id="addBtn">Submit</button>
+                <button class="btn btn-primary d-none" onclick="updateResult()  " id="updateBtn" >update</button>
+    
+
+            </div>
+
+            <hr>
+            <h4 class="text-left text-secondary ">© 2019 Bookmarker Inc.</h4>
+        </div>
+       
+
+
+        <div class="w-75 mx-auto p-4">
+            <label for="search">search</label>
+            <input type="text" id="search" oninput="searchBook(this.value)" class="form-control " placeholder="search by Bookmark Name">
+
+        </div>
+        <table class="table w-75 mx-auto">
+            <thead>
+                <th>siteName</th>
+                <th>siteURL</th>
+                <th>update</th>
+                <th>delete</th>
+                <th>visit</th>
+            </thead>
+
+            <tbody id="tableBody">
+               
+            </tbody>
+        </table>
+
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
